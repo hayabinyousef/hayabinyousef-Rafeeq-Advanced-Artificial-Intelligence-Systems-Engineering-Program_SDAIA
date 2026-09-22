@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rafeeq.training/schemas/trace.schema.json",
+  "title": "Rafeeq redacted trace event",
+  "description": "One operational event with decisions, counters and latency, never raw prompts or chain-of-thought.",
+  "type": "object",
+  "required": [
+    "trace_id", "span_id", "parent_span_id", "timestamp_utc", "component",
+    "event_type", "status", "latency_ms", "route", "outcome", "risk_flags",
+    "model_calls_delta", "tool_calls_delta", "retrieval_calls_delta", "redacted"
+  ],
+  "properties": {
+    "trace_id": {"type": "string", "minLength": 12, "maxLength": 64},
+    "span_id": {"type": "string", "minLength": 8, "maxLength": 64},
+    "parent_span_id": {"type": ["string", "null"], "minLength": 8, "maxLength": 64},
+    "timestamp_utc": {"type": "string", "format": "date-time"},
+    "component": {"type": "string", "minLength": 1, "maxLength": 80},
+    "event_type": {"type": "string", "minLength": 1, "maxLength": 80},
+    "status": {"type": "string", "minLength": 1, "maxLength": 40},
+    "latency_ms": {"type": "number", "minimum": 0},
+    "route": {"type": ["string", "null"], "maxLength": 40},
+    "outcome": {"type": ["string", "null"], "maxLength": 120},
+    "risk_flags": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1, "maxLength": 80},
+      "uniqueItems": true
+    },
+    "model_calls_delta": {"type": "integer", "minimum": 0},
+    "tool_calls_delta": {"type": "integer", "minimum": 0},
+    "retrieval_calls_delta": {"type": "integer", "minimum": 0},
+    "redacted": {"const": true}
+  },
+  "not": {
+    "anyOf": [
+      {"required": ["message"]},
+      {"required": ["prompt"]},
+      {"required": ["chain_of_thought"]},
+      {"required": ["customer_id"]}
+    ]
+  },
+  "additionalProperties": true
+}

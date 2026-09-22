@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-language="both">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Compare Rafeeq Mini learner JSON evidence with the validated stable reference contract, locally in the browser.">
+    <meta name="theme-color" content="#071c2f">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self' https://almiyead-rgb.github.io; object-src 'none'; base-uri 'none'; form-action 'none'">
+    <title>Compare lab evidence · قارن نتائج اللاب</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2331bad7'/%3E%3Cpath d='M9 16l4 4L24 9' fill='none' stroke='%23071c2f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="assets/css/compare.css">
+    <script src="assets/js/compare.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to comparison · انتقل إلى المقارنة</a>
+
+    <header class="topbar">
+      <div class="nav-wrap">
+        <a class="brand" href="index.html" aria-label="Rafeeq Mini Labs home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span class="brand-copy">
+            <strong>Rafeeq Mini Labs</strong>
+            <small lang="ar" dir="rtl">لابات رفيق المصغّر</small>
+          </span>
+        </a>
+        <a class="home-link" href="index.html">
+          <span class="lang-en" lang="en">Learner portal</span>
+          <span class="link-divider" aria-hidden="true"></span>
+          <span class="lang-ar" lang="ar" dir="rtl">بوابة المتدرب</span>
+        </a>
+        <div class="language-switch" role="group" aria-label="Display language · لغة العرض">
+          <button type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang-switch="both" aria-pressed="true">EN | عربي</button>
+          <button type="button" data-lang-switch="ar" aria-pressed="false">عربي</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="compare-hero" aria-labelledby="page-title-en page-title-ar">
+        <div class="hero-grid bilingual-grid">
+          <div class="lang-en" lang="en" dir="ltr">
+            <p class="eyebrow">LOCAL EVIDENCE CHECKER</p>
+            <h1 id="page-title-en">Compare your result, then fix the right cell.</h1>
+            <p>Choose one JSON artifact produced by the notebook. The checker identifies it, compares only stable evidence, and points you to the section worth revisiting.</p>
+          </div>
+          <div class="lang-ar" lang="ar" dir="rtl">
+            <p class="eyebrow">أداة فحص محلية للأدلة</p>
+            <h1 id="page-title-ar">قارن نتيجتك، ثم أصلح الخلية المناسبة.</h1>
+            <p>اختر ملف JSON واحدًا أنشأه الدفتر. تتعرف الأداة عليه، وتقارن الأدلة الثابتة فقط، ثم توجهك إلى القسم الذي يستحق المراجعة.</p>
+          </div>
+        </div>
+        <div class="privacy-ribbon" role="note">
+          <span class="privacy-icon" aria-hidden="true">⌂</span>
+          <span class="lang-en" lang="en"><strong>Local only:</strong> your file stays in this browser tab. Nothing is uploaded or stored.</span>
+          <span class="ribbon-divider" aria-hidden="true"></span>
+          <span class="lang-ar" lang="ar" dir="rtl"><strong>محلي فقط:</strong> يبقى ملفك داخل علامة التبويب، ولا يُرفع أو يُحفظ.</span>
+        </div>
+      </section>
+
+      <section class="compare-shell" aria-labelledby="checker-title-en checker-title-ar">
+        <ol class="process-strip" aria-label="Comparison steps · خطوات المقارنة">
+          <li class="is-active"><span>01</span><b class="lang-en">Choose JSON</b><b class="lang-ar" dir="rtl">اختر JSON</b></li>
+          <li><span>02</span><b class="lang-en">Detect output</b><b class="lang-ar" dir="rtl">تعرّف على المخرج</b></li>
+          <li><span>03</span><b class="lang-en">Compare evidence</b><b class="lang-ar" dir="rtl">قارن الأدلة</b></li>
+          <li><span>04</span><b class="lang-en">Revisit cell</b><b class="lang-ar" dir="rtl">راجع الخلية</b></li>
+        </ol>
+
+        <div class="checker-grid">
+          <section class="upload-panel" aria-labelledby="checker-title-en checker-title-ar">
+            <header class="panel-heading bilingual-grid compact-grid">
+              <div class="lang-en" lang="en" dir="ltr">
+                <span class="step-label">STEP 1</span>
+                <h2 id="checker-title-en">Choose one notebook result</h2>
+                <p>Accepted: JSON only, up to 1 MB. Start with a day gate or the final assessment.</p>
+              </div>
+              <div class="lang-ar" lang="ar" dir="rtl">
+                <span class="step-label">الخطوة 1</span>
+                <h2 id="checker-title-ar">اختر نتيجة واحدة من الدفتر</h2>
+                <p>المسموح: JSON فقط وبحد أقصى 1 MB. ابدأ ببوابة أحد الأيام أو التقييم النهائي.</p>
+              </div>
+            </header>
+
+            <div class="reference-state" id="reference-state" data-state="loading" role="status" aria-live="polite">
+              <span class="reference-dot" aria-hidden="true"></span>
+              <div>
+                <b class="lang-en" data-reference-title-en>Loading validated reference…</b>
+                <b class="lang-ar" dir="rtl" data-reference-title-ar>جارٍ تحميل المرجع المتحقق…</b>
+                <small data-reference-detail>reference-profile.json</small>
+              </div>
+            </div>
+
+            <div class="drop-zone" id="drop-zone" tabindex="0" role="button" aria-controls="artifact-file" aria-describedby="file-help">
+              <input id="artifact-file" type="file" accept=".json,application/json" hidden>
+              <span class="drop-icon" aria-hidden="true">⇧</span>
+              <div class="drop-copy lang-en" lang="en" dir="ltr">
+                <strong>Choose a JSON file</strong>
+                <span>or drop it here</span>
+              </div>
+              <div class="drop-copy lang-ar" lang="ar" dir="rtl">
+                <strong>اختر ملف JSON</strong>
+                <span>أو أفلته هنا</span>
+              </div>
+              <span class="file-rule" id="file-help">.json · ≤ 1 MB · read locally</span>
+            </div>
+
+            <div class="selected-file" id="selected-file" hidden>
+              <span class="file-glyph" aria-hidden="true">{ }</span>
+              <div>
+                <strong data-file-name></strong>
+                <small data-file-meta></small>
+              </div>
+              <button class="quiet-button" id="clear-file" type="button">Clear · مسح</button>
+            </div>
+
+            <div class="error-box" id="error-box" role="alert" hidden>
+              <span aria-hidden="true">!</span>
+              <div>
+                <strong data-error-title></strong>
+                <p data-error-detail></p>
+              </div>
+            </div>
+          </section>
+
+          <aside class="supported-panel" aria-labelledby="supported-title-en supported-title-ar">
+            <div class="supported-heading bilingual-grid compact-grid">
+              <div class="lang-en" lang="en">
+                <span class="step-label">WHAT WORKS</span>
+                <h2 id="supported-title-en">Recognized evidence</h2>
+              </div>
+              <div class="lang-ar" lang="ar" dir="rtl">
+                <span class="step-label">الملفات المدعومة</span>
+                <h2 id="supported-title-ar">الأدلة التي تتعرف عليها الأداة</h2>
+              </div>
+            </div>
+            <ul class="artifact-list">
+              <li><span>C0</span><div><b>Environment doctor</b><small dir="rtl">فاحص البيئة</small></div><code>doctor_report.json</code></li>
+              <li><span>C9</span><div><b>Day 1 gate</b><small dir="rtl">بوابة اليوم الأول</small></div><code>day1_results.json</code></li>
+              <li><span>C20</span><div><b>Day 2 gate + memory</b><small dir="rtl">بوابة اليوم الثاني والذاكرة</small></div><code>day2*.json</code></li>
+              <li><span>C23</span><div><b>Day 3 security</b><small dir="rtl">أمن اليوم الثالث</small></div><code>day3*.json</code></li>
+              <li><span>C27</span><div><b>Final assessment</b><small dir="rtl">التقييم النهائي</small></div><code>assessment_results.json</code></li>
+              <li><span>C29</span><div><b>Completion + manifest</b><small dir="rtl">الاكتمال وبيان التسليم</small></div><code>learner_todo_status.json · submission_manifest.json</code></li>
+            </ul>
+            <p class="support-note">
+              <span class="lang-en">The checker ignores timestamps, IDs, latency, Python version, file hashes and sizes.</span>
+              <span class="lang-ar" lang="ar" dir="rtl">يتجاهل الفاحص التوقيتات والمعرّفات وزمن الاستجابة وإصدار Python وهاشات الملفات وأحجامها.</span>
+            </p>
+          </aside>
+        </div>
+
+        <section class="results-panel" id="results-panel" aria-labelledby="results-title-en results-title-ar" hidden>
+          <header class="results-header">
+            <div class="result-title bilingual-grid compact-grid">
+              <div class="lang-en" lang="en" dir="ltr">
+                <span class="step-label">COMPARISON RESULT</span>
+                <h2 id="results-title-en">Stable evidence check</h2>
+              </div>
+              <div class="lang-ar" lang="ar" dir="rtl">
+                <span class="step-label">نتيجة المقارنة</span>
+                <h2 id="results-title-ar">فحص الأدلة الثابتة</h2>
+              </div>
+            </div>
+            <button class="secondary-button" id="compare-another" type="button">Compare another · قارن ملفًا آخر</button>
+          </header>
+
+          <div class="score-grid">
+            <article class="score-card detected-card">
+              <span class="score-icon" aria-hidden="true">◎</span>
+              <div><small>Detected · تم التعرّف</small><strong id="detected-name">—</strong><span id="detected-cell">—</span></div>
+            </article>
+            <article class="score-card pass-card">
+              <span class="score-icon" aria-hidden="true">✓</span>
+              <div><small>Matched · مطابق</small><strong id="pass-count">0</strong><span>stable checks · فحص ثابت</span></div>
+            </article>
+            <article class="score-card fail-card">
+              <span class="score-icon" aria-hidden="true">×</span>
+              <div><small>Review · يحتاج مراجعة</small><strong id="review-count">0</strong><span>checks · فحوص</span></div>
+            </article>
+            <article class="score-card fix-card">
+              <span class="score-icon" aria-hidden="true">!</span>
+              <div><small>Needs fix · يحتاج إصلاحًا</small><strong id="fix-count">0</strong><span>checks · فحوص</span></div>
+            </article>
+            <article class="score-card verdict-card" id="verdict-card" data-verdict="pending">
+              <span class="score-icon" aria-hidden="true">→</span>
+              <div><small>Next action · الإجراء التالي</small><strong id="verdict-en">Review result</strong><span id="verdict-ar" lang="ar" dir="rtl">راجع النتيجة</span></div>
+            </article>
+          </div>
+
+          <div class="results-toolbar">
+            <div class="filter-group" role="group" aria-label="Filter comparison rows · تصفية نتائج المقارنة">
+              <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">All · الكل</button>
+              <button type="button" class="filter-button" data-filter="review" aria-pressed="false">Review · للمراجعة</button>
+              <button type="button" class="filter-button" data-filter="needs_fix" aria-pressed="false">Needs fix · يحتاج إصلاحًا</button>
+              <button type="button" class="filter-button" data-filter="match" aria-pressed="false">Matched · مطابق</button>
+            </div>
+            <p id="comparison-policy">Declared stable fields only · الحقول الثابتة المعلنة فقط</p>
+          </div>
+
+          <div class="table-scroll" tabindex="0" aria-label="Comparison details · تفاصيل المقارنة">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th scope="col"><span>Check</span><small dir="rtl">الفحص</small></th>
+                  <th scope="col"><span>Expected</span><small dir="rtl">المتوقع</small></th>
+                  <th scope="col"><span>Your result</span><small dir="rtl">نتيجتك</small></th>
+                  <th scope="col"><span>Status</span><small dir="rtl">الحالة</small></th>
+                  <th scope="col"><span>Revisit</span><small dir="rtl">راجع</small></th>
+                </tr>
+              </thead>
+              <tbody id="comparison-body"></tbody>
+            </table>
+          </div>
+
+          <div class="result-guidance" id="result-guidance">
+            <span aria-hidden="true">i</span>
+            <p class="lang-en" lang="en">A different timestamp or latency is normal. Inspect “Review” rows and correct “Needs fix” rows, rerun the named cell, then generate the JSON again.</p>
+            <p class="lang-ar" lang="ar" dir="rtl">اختلاف الوقت أو زمن الاستجابة طبيعي. افحص صفوف «راجع» وصحح صفوف «يحتاج إصلاحًا»، ثم أعد تشغيل الخلية المذكورة وأنشئ JSON من جديد.</p>
+          </div>
+        </section>
+      </section>
+
+      <section class="how-section bilingual-grid" aria-labelledby="how-title-en how-title-ar">
+        <div class="lang-en" lang="en" dir="ltr">
+          <p class="eyebrow">READ THE RESULT</p>
+          <h2 id="how-title-en">Evidence, not identical files.</h2>
+          <p>A valid run does not need the same timestamp, latency, identifier, hash, or file size as the reference. The comparison focuses on routes, outcomes, gates, bounded counters, safety controls, and readiness.</p>
+        </div>
+        <div class="lang-ar" lang="ar" dir="rtl">
+          <p class="eyebrow">اقرأ النتيجة</p>
+          <h2 id="how-title-ar">قارن الأدلة، لا تطابق الملفات حرفيًا.</h2>
+          <p>لا يلزم أن يطابق التشغيل الصحيح المرجع في الوقت أو زمن الاستجابة أو المعرّف أو الهاش أو حجم الملف. تركز المقارنة على المسارات والنتائج والبوابات والحدود وضوابط الأمن والجاهزية.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>Rafeeq Mini Labs</strong><small>Meaad Al-Marri · ميعاد المري</small></div>
+      <p>Educational synthetic data only · بيانات تعليمية مصطنعة فقط</p>
+      <a href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </footer>
+
+    <div class="sr-only" id="live-status" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>

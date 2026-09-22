@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rafeeq.training/schemas/manifest.schema.json",
+  "title": "Rafeeq submission manifest",
+  "description": "Deterministic inventory and assessment linkage generated before manual notebook upload.",
+  "type": "object",
+  "required": [
+    "schema_version", "generated_at_utc", "export_id", "assessment_run_id",
+    "assessment_sha256", "expected_final_commit_message",
+    "completed_notebook_upload_required", "learner_todo_status", "files",
+    "safety_checks", "all_passed"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "generated_at_utc": {"type": "string", "format": "date-time"},
+    "export_id": {"type": "string", "pattern": "^export-[a-f0-9]{16}$"},
+    "assessment_run_id": {"type": "string", "pattern": "^run-[A-Za-z0-9_-]{12,80}$"},
+    "assessment_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "expected_final_commit_message": {"type": "string", "minLength": 1, "maxLength": 200},
+    "completed_notebook_upload_required": {"const": true},
+    "learner_todo_status": {
+      "type": "object",
+      "required": ["schema_version", "completed", "total", "all_complete", "items"],
+      "properties": {
+        "schema_version": {"const": "1.0"},
+        "completed": {"const": 14},
+        "total": {"const": 14},
+        "all_complete": {"const": true},
+        "items": {
+          "type": "array",
+          "minItems": 14,
+          "maxItems": 14,
+          "items": {
+            "type": "object",
+            "required": ["exercise", "passed"],
+            "properties": {
+              "exercise": {"type": "string", "pattern": "^TODO-(?:[1-9]|1[0-4])$"},
+              "passed": {"const": true}
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256", "size_bytes"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+          },
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "size_bytes": {"type": "integer", "minimum": 0}
+        },
+        "additionalProperties": false
+      }
+    },
+    "safety_checks": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"const": true}
+    },
+    "all_passed": {"const": true}
+  },
+  "additionalProperties": true
+}

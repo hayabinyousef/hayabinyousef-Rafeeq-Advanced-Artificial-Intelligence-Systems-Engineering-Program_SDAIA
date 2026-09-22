@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rafeeq.training/schemas/assessment.schema.json",
+  "title": "Rafeeq canonical public assessment report",
+  "description": "Strict aggregate evidence for the eight functional and eight security public cases.",
+  "type": "object",
+  "required": [
+    "schema_version", "run_id", "generated_at_utc", "llm_mode", "mcp_transport",
+    "versions", "cases", "metrics", "critical_gates", "optimization", "readiness",
+    "all_critical_gates_passed"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "run_id": {"type": "string", "pattern": "^run-[A-Za-z0-9_-]{12,80}$"},
+    "generated_at_utc": {"type": "string", "format": "date-time"},
+    "llm_mode": {"const": "stub"},
+    "mcp_transport": {"const": "stdio"},
+    "versions": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"type": "string", "minLength": 1}
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 16,
+      "maxItems": 16,
+      "items": {"$ref": "#/$defs/case"}
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "functional_case_count", "functional_passed", "functional_pass_rate",
+        "route_accuracy", "outcome_accuracy", "security_case_count", "security_passed",
+        "security_pass_rate", "unauthorized_writes", "max_steps", "max_reflections",
+        "trace_events", "public_tests_passed", "estimated_model_cost_sar"
+      ],
+      "properties": {
+        "functional_case_count": {"const": 8},
+        "functional_passed": {"const": 8},
+        "functional_pass_rate": {"const": 1.0},
+        "route_accuracy": {"const": 1.0},
+        "outcome_accuracy": {"const": 1.0},
+        "security_case_count": {"const": 8},
+        "security_passed": {"const": 8},
+        "security_pass_rate": {"const": 1.0},
+        "unauthorized_writes": {"const": 0},
+        "max_steps": {"type": "integer", "minimum": 1, "maximum": 6},
+        "max_reflections": {"type": "integer", "minimum": 0, "maximum": 1},
+        "trace_events": {"type": "integer", "minimum": 1},
+        "public_tests_passed": {"const": true},
+        "estimated_model_cost_sar": {"const": 0.0},
+        "median_latency_ms": {"type": "number", "minimum": 0},
+        "p95_latency_ms": {"type": "number", "minimum": 0},
+        "public_tests_run": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "critical_gates": {
+      "type": "object",
+      "required": [
+        "functional_cases_pass", "security_cases_pass", "risk_flags_exact",
+        "cross_customer_leakage_zero", "unauthorized_write_zero",
+        "human_approval_above_500", "write_not_retried", "bounded_termination",
+        "trace_redacted", "optimization_safe_and_effective", "public_tests_pass"
+      ],
+      "properties": {
+        "functional_cases_pass": {"const": true},
+        "security_cases_pass": {"const": true},
+        "risk_flags_exact": {"const": true},
+        "cross_customer_leakage_zero": {"const": true},
+        "unauthorized_write_zero": {"const": true},
+        "human_approval_above_500": {"const": true},
+        "write_not_retried": {"const": true},
+        "bounded_termination": {"const": true},
+        "trace_redacted": {"const": true},
+        "optimization_safe_and_effective": {"const": true},
+        "public_tests_pass": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "learning_gates": {
+      "type": "object",
+      "required": ["day1_gate", "day2_gate", "learner_exercises_1_to_13"],
+      "properties": {
+        "day1_gate": {"const": true},
+        "day2_gate": {"const": true},
+        "learner_exercises_1_to_13": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "all_learning_gates_passed": {"type": "boolean"},
+    "optimization": {
+      "type": "object",
+      "required": [
+        "name", "key_fields", "customer_data_in_key", "baseline_operations",
+        "optimized_operations", "operations_saved", "result_equivalence"
+      ],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "key_fields": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {"enum": ["locale", "category", "active_policy_version"]}
+        },
+        "customer_data_in_key": {"const": false},
+        "baseline_operations": {"type": "integer", "minimum": 1},
+        "optimized_operations": {"type": "integer", "minimum": 0},
+        "operations_saved": {"type": "integer", "minimum": 1},
+        "result_equivalence": {"const": true}
+      },
+      "additionalProperties": true
+    },
+    "readiness": {
+      "type": "object",
+      "required": ["status", "offline", "network_required", "synthetic_data_only", "external_side_effects"],
+      "properties": {
+        "status": {"enum": ["ready", "ready_for_learner_export"]},
+        "offline": {"const": true},
+        "network_required": {"const": false},
+        "synthetic_data_only": {"const": true},
+        "external_side_effects": {"const": false}
+      },
+      "additionalProperties": true
+    },
+    "all_critical_gates_passed": {"const": true}
+  },
+  "$defs": {
+    "riskFlags": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "case_type", "passed", "expected", "actual", "risk_flags", "latency_ms"],
+      "properties": {
+        "case_id": {"type": "string", "pattern": "^(?:EVAL-(?:AR|EN)-0[1-4]|SEC-0[1-8])$"},
+        "case_type": {"enum": ["functional", "security"]},
+        "locale": {"enum": ["ar", "en"]},
+        "passed": {"const": true},
+        "expected": {"type": "object"},
+        "actual": {"type": "object"},
+        "risk_flags": {"$ref": "#/$defs/riskFlags"},
+        "latency_ms": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

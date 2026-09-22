@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-language="both" data-release-status="release-candidate">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bilingual learner portal for the Rafeeq Mini three-day agentic AI engineering capstone.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#071c2f">
+    <title>Rafeeq Mini Labs · لابات رفيق المصغّر</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2331bad7'/%3E%3Cpath d='M16 7l1.7 5.3L23 14l-5.3 1.7L16 21l-1.7-5.3L9 14l5.3-1.7L16 7zm7 13l.8 2.2L26 23l-2.2.8L23 26l-.8-2.2L20 23l2.2-.8L23 20z' fill='%23071c2f'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content · انتقل إلى المحتوى</a>
+
+    <div class="release-banner" role="status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <strong class="lang-en" lang="en">Release candidate 0.9.0-rc3 · automated checks passed · hosted Colab pilot pending</strong>
+      <span class="release-divider" aria-hidden="true"></span>
+      <strong class="lang-ar" lang="ar" dir="rtl">مرشح الإصدار 0.9.0-rc3 · نجحت الفحوص الآلية · تجربة Colab المستضافة معلقة</strong>
+    </div>
+
+    <header class="topbar">
+      <div class="nav-wrap">
+        <a class="brand" href="#top" aria-label="Rafeeq Mini Labs home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span class="brand-copy">
+            <b>Rafeeq Mini Labs</b>
+            <small lang="ar" dir="rtl">لابات رفيق المصغّر</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#project">Project <span lang="ar" dir="rtl">المشروع</span></a>
+          <a href="#roadmap">3-day lab <span lang="ar" dir="rtl">لاب 3 أيام</span></a>
+          <a href="#reference-results">Results <span lang="ar" dir="rtl">النتائج</span></a>
+          <a href="#submission">Submit <span lang="ar" dir="rtl">التسليم</span></a>
+          <a href="#setup">Start <span lang="ar" dir="rtl">البداية</span></a>
+          <a href="#help">Help <span lang="ar" dir="rtl">المساعدة</span></a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="language-switch" role="group" aria-label="Display language · لغة العرض">
+            <span aria-hidden="true">文</span>
+            <button type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+            <button type="button" data-lang-switch="both" aria-pressed="true">EN | عربي</button>
+            <button type="button" data-lang-switch="ar" aria-pressed="false">عربي</button>
+          </div>
+          <a class="github-link" href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs" target="_blank" rel="noopener noreferrer" aria-label="Open Rafeeq Mini repository on GitHub">
+            <span aria-hidden="true">◉</span><span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title-en hero-title-ar">
+        <div class="hero-grid">
+          <div class="hero-copy lang-en" lang="en" dir="ltr">
+            <p class="overline"><span aria-hidden="true"></span> Advanced Agentic AI Systems Engineering</p>
+            <h1 id="hero-title-en">Build a safe, auditable <em>agentic system</em> in three days.</h1>
+            <p class="hero-summary">One cumulative Colab lab—from environment check to a tested GitHub submission. Designed for clarity, evidence, and a confident first run.</p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#setup">First time? Start here <span aria-hidden="true">→</span></a>
+              <a class="text-button" href="#roadmap">Explore the lab <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <div class="hero-separator" aria-hidden="true"><span>03</span></div>
+
+          <div class="hero-copy lang-ar" lang="ar" dir="rtl">
+            <p class="overline"><span aria-hidden="true"></span> هندسة أنظمة الذكاء الاصطناعي التوكيلي المتقدمة</p>
+            <h1 id="hero-title-ar">ابنِ نظامًا وكيليًا <em>آمنًا وقابلًا للتدقيق</em> في ثلاثة أيام.</h1>
+            <p class="hero-summary">لاب تراكمي واحد على كولاب، يبدأ بفحص البيئة وينتهي بمشروع مختبر وجاهز للتسليم عبر GitHub، بوضوح وأدلة وتشغيل أول ناجح.</p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#setup"><span aria-hidden="true">←</span> أول مرة؟ ابدأ من هنا</a>
+              <a class="text-button" href="#roadmap"><span aria-hidden="true">↓</span> استكشف اللاب</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fact-strip" aria-label="Course essentials · أساسيات الدورة">
+          <div class="fact"><span class="lang-en">3 Days</span><i></i><span class="lang-ar" dir="rtl">3 أيام</span></div>
+          <div class="fact"><span class="lang-en">30 guided sections</span><i></i><span class="lang-ar" dir="rtl">30 قسمًا موجّهًا</span></div>
+          <div class="fact"><span class="lang-en">Colab Free</span><i></i><span class="lang-ar" dir="rtl">كولاب مجاني</span></div>
+          <div class="fact"><span class="lang-en">CPU Only</span><i></i><span class="lang-ar" dir="rtl">CPU فقط</span></div>
+          <div class="fact"><span class="lang-en">No API Key</span><i></i><span class="lang-ar" dir="rtl">بلا مفتاح API</span></div>
+          <div class="fact"><span class="lang-en">Bilingual</span><i></i><span class="lang-ar" dir="rtl">ثنائي اللغة</span></div>
+        </div>
+      </section>
+
+      <section class="path-section" aria-labelledby="path-title">
+        <p class="section-kicker" id="path-title">Choose your path · اختر مسارك</p>
+        <div class="path-grid">
+          <article class="path-card beginner-card">
+            <div class="path-icon" aria-hidden="true">▤</div>
+            <div class="path-copy lang-en" lang="en" dir="ltr">
+              <span class="path-tag">RECOMMENDED FOR FIRST-TIMERS</span>
+              <h2>Beginner guided path</h2>
+              <p>New to GitHub or Colab? Follow four browser-only steps from account creation to your first successful run. No Git install, terminal, or token required.</p>
+              <small>Target: 15–25 min · Finish: a reserved repository with a safe progress log + <code>C0 = READY</code></small>
+              <a class="primary-button compact" href="#setup">Open guided setup <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="path-copy lang-ar" lang="ar" dir="rtl">
+              <span class="path-tag">موصى به للمبتدئين</span>
+              <h2>مسار المبتدئ الموجّه</h2>
+              <p>تستخدم GitHub أو كولاب لأول مرة؟ اتبع أربع خطوات من المتصفح، من إنشاء الحساب حتى أول تشغيل ناجح. لا تحتاج تثبيت Git أو الطرفية أو رمز وصول.</p>
+              <small>المستهدف: 15–25 دقيقة · النهاية: مستودع محجوز بسجل تقدم آمن + <code>C0 = READY</code></small>
+              <a class="primary-button compact" href="#setup"><span aria-hidden="true">←</span> افتح التجهيز الموجّه</a>
+            </div>
+          </article>
+
+          <article class="path-card ready-card">
+            <div class="path-icon" aria-hidden="true">ϟ</div>
+            <div class="path-copy lang-en" lang="en" dir="ltr">
+              <span class="path-tag">ALREADY COMFORTABLE?</span>
+              <h2>Ready path</h2>
+              <p>Open the cumulative notebook directly, save a Drive copy, and run the environment doctor.</p>
+              <small>Target: 2–5 min · Finish: <code>C0 = READY</code></small>
+              <a class="secondary-button compact" href="https://colab.research.google.com/github/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/notebooks/Rafeeq_Mini_Capstone.ipynb" target="_blank" rel="noopener noreferrer">Open Colab <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="path-copy lang-ar" lang="ar" dir="rtl">
+              <span class="path-tag">لديك خبرة سابقة؟</span>
+              <h2>المسار السريع</h2>
+              <p>افتح الدفتر التراكمي مباشرة، واحفظ نسخة في Drive، ثم شغّل فحص البيئة.</p>
+              <small>المستهدف: 2–5 دقائق · النهاية: <code>C0 = READY</code></small>
+              <a class="secondary-button compact" href="https://colab.research.google.com/github/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/notebooks/Rafeeq_Mini_Capstone.ipynb" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> افتح كولاب</a>
+            </div>
+          </article>
+        </div>
+        <p class="path-note"><span class="lang-en">Both paths lead to one cumulative notebook and the same sections, C0–C29.</span><span class="lang-divider" aria-hidden="true"></span><span class="lang-ar" lang="ar" dir="rtl">يصل المساران إلى دفتر تراكمي واحد والأقسام نفسها، C0–C29.</span></p>
+      </section>
+
+      <section class="setup-section" id="setup" aria-labelledby="setup-title-en setup-title-ar">
+        <header class="section-heading">
+          <p class="eyebrow-pair"><span class="lang-en">START HERE</span><span class="lang-divider" aria-hidden="true"></span><span class="lang-ar" dir="rtl">ابدأ من هنا</span></p>
+          <div class="section-title-grid">
+            <div class="lang-en" lang="en" dir="ltr">
+              <h2 id="setup-title-en">Your first successful run, step by step.</h2>
+              <p>Use these four browser-only steps. Each action opens the exact page you need; the lab itself stays free and credential-free.</p>
+            </div>
+            <div class="lang-ar" lang="ar" dir="rtl">
+              <h2 id="setup-title-ar">تشغيلك الأول الناجح، خطوة بخطوة.</h2>
+              <p>استخدم هذه الخطوات الأربع من المتصفح. يفتح كل إجراء الصفحة المطلوبة مباشرة، ويبقى اللاب مجانيًا وبلا بيانات دخول برمجية.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="setup-board" data-setup-board>
+          <div class="setup-progress" role="progressbar" aria-label="Setup progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span></span></div>
+          <div class="stepper" role="tablist" aria-label="Guided setup · خطوات التجهيز الموجّه">
+            <button class="step current" id="setup-tab-1" type="button" role="tab" aria-selected="true" aria-controls="setup-detail" tabindex="0" data-step="0">
+              <span class="step-number" aria-hidden="true">01</span><span class="step-label"><b class="lang-en">Create account</b><b class="lang-ar" dir="rtl">إنشاء الحساب</b><small>5–10 min</small></span>
+            </button>
+            <button class="step" id="setup-tab-2" type="button" role="tab" aria-selected="false" aria-controls="setup-detail" tabindex="-1" data-step="1">
+              <span class="step-number" aria-hidden="true">02</span><span class="step-label"><b class="lang-en">Create repository</b><b class="lang-ar" dir="rtl">إنشاء المستودع</b><small>3–5 min</small></span>
+            </button>
+            <button class="step" id="setup-tab-3" type="button" role="tab" aria-selected="false" aria-controls="setup-detail" tabindex="-1" data-step="2">
+              <span class="step-number" aria-hidden="true">03</span><span class="step-label"><b class="lang-en">Prepare Colab</b><b class="lang-ar" dir="rtl">تجهيز كولاب</b><small>3–5 min</small></span>
+            </button>
+            <button class="step" id="setup-tab-4" type="button" role="tab" aria-selected="false" aria-controls="setup-detail" tabindex="-1" data-step="3">
+              <span class="step-number" aria-hidden="true">04</span><span class="step-label"><b class="lang-en">Reach C0 READY</b><b class="lang-ar" dir="rtl">الوصول إلى C0 READY</b><small>2–5 min</small></span>
+            </button>
+          </div>
+
+          <div class="setup-detail" id="setup-detail" role="tabpanel" aria-labelledby="setup-tab-1">
+            <div class="detail-icon" aria-hidden="true" data-step-icon>◉</div>
+            <div class="detail-copy lang-en" lang="en" dir="ltr">
+              <span data-step-count-en>STEP 1 OF 4</span>
+              <h3 data-step-title-en>Create account</h3>
+              <p data-step-body-en>Create a personal GitHub account, verify your email, and choose a professional username.</p>
+            </div>
+            <div class="detail-copy lang-ar" lang="ar" dir="rtl">
+              <span data-step-count-ar>الخطوة 1 من 4</span>
+              <h3 data-step-title-ar>إنشاء الحساب</h3>
+              <p data-step-body-ar>أنشئ حساب GitHub شخصيًا، ووثّق بريدك، واختر اسم مستخدم مهنيًا.</p>
+            </div>
+            <div class="detail-actions">
+              <span class="preview-chip"><span aria-hidden="true">✓</span> READY · جاهز</span>
+              <a class="secondary-button compact" href="https://github.com/signup" target="_blank" rel="noopener noreferrer" data-step-action>Open GitHub signup · افتح تسجيل GitHub <span aria-hidden="true">↗</span></a>
+              <button class="primary-button compact" type="button" data-next-step>Next step · الخطوة التالية <span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mental-model">
+          <span class="mental-icon" aria-hidden="true">✦</span>
+          <p class="lang-en" lang="en" dir="ltr"><b>Keep this mental model:</b> GitHub is the permanent home. Drive holds your working copy. Colab Runtime is a temporary computer. A commit is a recorded checkpoint.</p>
+          <p class="lang-ar" lang="ar" dir="rtl"><b>احتفظ بهذا النموذج الذهني:</b> GitHub هو المنزل الدائم. يحتفظ Drive بنسخة العمل. بيئة Colab جهاز مؤقت. والـCommit نقطة حفظ موثقة.</p>
+        </div>
+
+        <aside class="policy-banner" aria-labelledby="repo-policy-en repo-policy-ar">
+          <span class="policy-icon" aria-hidden="true">⑂</span>
+          <div class="lang-en" lang="en" dir="ltr">
+            <strong id="repo-policy-en">Repository policy</strong>
+            <p>Create the public repository during setup and add only <code>LEARNING_PROGRESS.md</code> from the <a href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/LEARNING_PROGRESS_TEMPLATE.md" target="_blank" rel="noopener noreferrer">safe template</a>. Update that file after C9 and C20; keep code and runtime evidence in Drive until the clean C29 export. If policy blocks public repositories, tell the trainer before Day 1.</p>
+          </div>
+          <div class="lang-ar" lang="ar" dir="rtl">
+            <strong id="repo-policy-ar">سياسة المستودع</strong>
+            <p>أنشئ المستودع العام أثناء التجهيز وأضف <code>LEARNING_PROGRESS.md</code> فقط من <a href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/LEARNING_PROGRESS_TEMPLATE.md" target="_blank" rel="noopener noreferrer">القالب الآمن</a>. حدّثه بعد C9 وC20، وأبقِ الكود وأدلة التشغيل في Drive حتى تصدير C29 النظيف. إذا منعت السياسة المستودعات العامة فأبلغ المدربة قبل اليوم الأول.</p>
+          </div>
+        </aside>
+
+        <details class="video-disclosure setup-videos" id="setup-videos">
+          <summary>
+            <span class="video-summary-icon" aria-hidden="true">▶</span>
+            <span class="video-summary-copy">
+              <b class="lang-en" lang="en" dir="ltr">Prefer a visual walkthrough?</b>
+              <b class="lang-ar" lang="ar" dir="rtl">تفضّل شرحًا مرئيًا؟</b>
+              <small class="lang-en" lang="en" dir="ltr">Optional GitHub and Colab help for first-time learners.</small>
+              <small class="lang-ar" lang="ar" dir="rtl">مساعدة اختيارية في GitHub وكولاب لمن يستخدمهما أول مرة.</small>
+            </span>
+            <span class="video-summary-meta">4 guides · 4 أدلة</span>
+            <span class="video-chevron" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="video-list">
+            <a class="video-card" href="https://www.youtube.com/watch?v=XO0LhC3RtAQ" target="_blank" rel="noopener noreferrer">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-card-body">
+                <span class="video-topic">SETUP 01–02 · BEGINNER</span>
+                <b class="lang-en" lang="en" dir="ltr">Git &amp; GitHub from zero</b>
+                <b class="lang-ar" lang="ar" dir="rtl">تعلّم Git وGitHub من الصفر</b>
+                <small>Data Projects · 24:32 · AR</small>
+              </span>
+              <span class="video-open" aria-hidden="true">↗</span>
+            </a>
+            <a class="video-card" href="https://www.youtube.com/watch?v=tlu5e0TxSzo" target="_blank" rel="noopener noreferrer">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-card-body">
+                <span class="video-topic">SETUP 02 · QUICK HELP</span>
+                <b class="lang-en" lang="en" dir="ltr">Upload files and folders to GitHub</b>
+                <b class="lang-ar" lang="ar" dir="rtl">رفع ملفات المشروع إلى GitHub</b>
+                <small>GitHub · 3:50 · EN</small>
+              </span>
+              <span class="video-open" aria-hidden="true">↗</span>
+            </a>
+            <a class="video-card" href="https://www.youtube.com/watch?v=TqqkZLHoY0o" target="_blank" rel="noopener noreferrer">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-card-body">
+                <span class="video-topic">SETUP 03 · QUICK START</span>
+                <b class="lang-en" lang="en" dir="ltr">Run your first Google Colab notebook</b>
+                <b class="lang-ar" lang="ar" dir="rtl">شغّل أول دفتر لك على Google Colab</b>
+                <small>GeeksforGeeks · 2:53 · EN</small>
+              </span>
+              <span class="video-open" aria-hidden="true">↗</span>
+            </a>
+            <a class="video-card" href="https://www.youtube.com/watch?v=0AJglOaUVNQ" target="_blank" rel="noopener noreferrer">
+              <span class="video-play" aria-hidden="true">▶</span>
+              <span class="video-card-body">
+                <span class="video-topic">SETUP 03 · DRIVE COPY</span>
+                <b class="lang-en" lang="en" dir="ltr">Save and share a Colab file</b>
+                <b class="lang-ar" lang="ar" dir="rtl">احفظ نسخة كولاب وشاركها</b>
+                <small>NoRa SharK · 1:52 · EN</small>
+              </span>
+              <span class="video-open" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p class="video-footnote">
+            <span class="lang-en" lang="en" dir="ltr"><b>Optional support:</b> interfaces may change; this repository remains the course authority.</span>
+            <span class="lang-ar" lang="ar" dir="rtl"><b>دعم اختياري:</b> قد تتغير الواجهات؛ وتبقى تعليمات هذا المستودع مرجع الدورة.</span>
+          </p>
+        </details>
+      </section>
+
+      <section class="readiness-section" id="readiness" aria-labelledby="readiness-title-en readiness-title-ar">
+        <header class="section-heading">
+          <p class="eyebrow-pair"><span class="lang-en">10-MINUTE READINESS CHECK</span><span class="lang-divider" aria-hidden="true"></span><span class="lang-ar" dir="rtl">فحص جاهزية في 10 دقائق</span></p>
+          <div class="section-title-grid">
+            <div class="lang-en" lang="en" dir="ltr"><h2 id="readiness-title-en">Know your starting point before C1.</h2><p>This is a support check, not a grade. Tick only what you can do now; your result stays in this browser.</p></div>
+            <div class="lang-ar" lang="ar" dir="rtl"><h2 id="readiness-title-ar">اعرف نقطة بدايتك قبل C1.</h2><p>هذا فحص للدعم وليس للدرجات. حدّد فقط ما تستطيع تنفيذه الآن؛ وتبقى النتيجة داخل متصفحك.</p></div>
+          </div>
+        </header>
+
+        <form class="readiness-board" data-readiness-check>
+          <fieldset>
+            <legend class="sr-only">Readiness items · عناصر الجاهزية</legend>
+            <label class="readiness-item">
+              <input type="checkbox" name="github-account" value="1">
+              <span class="check-mark" aria-hidden="true">✓</span>
+              <span class="bilingual-pair"><span class="lang-en" lang="en" dir="ltr"><b>GitHub access</b><small>I can sign in and my email is verified.</small></span><span class="lang-ar" lang="ar" dir="rtl"><b>الدخول إلى GitHub</b><small>أستطيع تسجيل الدخول وبريدي موثّق.</small></span></span>
+            </label>
+            <label class="readiness-item">
+              <input type="checkbox" name="colab-cell" value="1">
+              <span class="check-mark" aria-hidden="true">✓</span>
+              <span class="bilingual-pair"><span class="lang-en" lang="en" dir="ltr"><b>Colab basics</b><small>I can save a Drive copy, edit a cell, and run it.</small></span><span class="lang-ar" lang="ar" dir="rtl"><b>أساسيات كولاب</b><small>أستطيع حفظ نسخة في Drive وتعديل خلية وتشغيلها.</small></span></span>
+            </label>
+            <label class="readiness-item">
+              <input type="checkbox" name="python-basics" value="1">
+              <span class="check-mark" aria-hidden="true">✓</span>
+              <span class="bilingual-pair"><span class="lang-en" lang="en" dir="ltr"><b>Python reading</b><small>I can recognize a function, list, dictionary, and JSON-like object.</small></span><span class="lang-ar" lang="ar" dir="rtl"><b>قراءة Python</b><small>أميّز الدالة والقائمة والقاموس وكائنًا يشبه JSON.</small></span></span>
+            </label>
+            <label class="readiness-item">
+              <input type="checkbox" name="file-handling" value="1">
+              <span class="check-mark" aria-hidden="true">✓</span>
+              <span class="bilingual-pair"><span class="lang-en" lang="en" dir="ltr"><b>Safe file handling</b><small>I can download, extract, and upload files without sharing secrets or real data.</small></span><span class="lang-ar" lang="ar" dir="rtl"><b>التعامل الآمن مع الملفات</b><small>أستطيع تنزيل الملفات وفكها ورفعها دون أسرار أو بيانات حقيقية.</small></span></span>
+            </label>
+          </fieldset>
+
+          <div class="readiness-result" role="status" aria-live="polite">
+            <span class="readiness-score" data-readiness-score>0/4</span>
+            <div class="lang-en" lang="en" dir="ltr"><b data-readiness-title-en>Start with the guided path.</b><p data-readiness-body-en>Complete the setup above and tell the trainer before C1 if you need a quick support check.</p></div>
+            <div class="lang-ar" lang="ar" dir="rtl"><b data-readiness-title-ar>ابدأ بالمسار الموجّه.</b><p data-readiness-body-ar>أكمل خطوات التجهيز أعلاه، وأبلغ المدربة قبل C1 إذا احتجت فحص دعم سريعًا.</p></div>
+          </div>
+        </form>
+      </section>
+
+      <section class="roadmap-section" id="roadmap" aria-labelledby="roadmap-title-en roadmap-title-ar">
+        <header class="section-heading">
+          <p class="eyebrow-pair"><span class="lang-en">ONE PROJECT · THREE DAYS</span><span class="lang-divider" aria-hidden="true"></span><span class="lang-ar" dir="rtl">مشروع واحد · ثلاثة أيام</span></p>
+          <div class="section-title-grid">
+            <div class="lang-en" lang="en" dir="ltr"><h2 id="roadmap-title-en">Build in layers. Prove every layer.</h2><p>The notebook grows with the learner. Every day ends at a clear gate and produces inspectable evidence.</p></div>
+            <div class="lang-ar" lang="ar" dir="rtl"><h2 id="roadmap-title-ar">ابنِ على مراحل. وأثبت كل مرحلة.</h2><p>ينمو الدفتر مع المتدرب. ينتهي كل يوم ببوابة واضحة وينتج أدلة قابلة للفحص.</p></div>
+          </div>
+        </header>
+
+        <div class="journey-line" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="days-grid">
+          <article class="day-card">
+            <div class="day-card-top"><span>DAY 01</span><b>C0–C9</b><i aria-hidden="true">⌘</i></div>
+            <div class="day-copy lang-en" lang="en" dir="ltr"><h3>Core &amp; Tools</h3><p>Typed state, bounded ReAct, decision traces, local tools, and an MCP connection.</p><small>OUTCOME · Agent graph + MCP</small></div>
+            <div class="day-copy lang-ar" lang="ar" dir="rtl"><h3>النواة والأدوات</h3><p>حالة محددة النوع، وReAct محدود، وسجلات قرار، وأدوات محلية، واتصال MCP.</p><small>الناتج · مخطط وكيل + MCP</small></div>
+            <code>C9_DAY1_GATE</code>
+          </article>
+
+          <article class="day-card">
+            <div class="day-card-top"><span>DAY 02</span><b>C10–C20</b><i aria-hidden="true">⇄</i></div>
+            <div class="day-copy lang-en" lang="en" dir="ltr"><h3>Memory &amp; Orchestration</h3><p>Scoped memory, active-policy retrieval, specialist agents, typed delegation, and human approval.</p><small>OUTCOME · Coordinated flow</small></div>
+            <div class="day-copy lang-ar" lang="ar" dir="rtl"><h3>الذاكرة والتنسيق</h3><p>ذاكرة معزولة، واسترجاع السياسة السارية، ووكلاء متخصصون، وتفويض محدد، وموافقة بشرية.</p><small>الناتج · تدفق منسق</small></div>
+            <code>C20_DAY2_GATE</code>
+          </article>
+
+          <article class="day-card">
+            <div class="day-card-top"><span>DAY 03</span><b>C21–C29</b><i aria-hidden="true">◇</i></div>
+            <div class="day-copy lang-en" lang="en" dir="ltr"><h3>Secure &amp; Prove</h3><p>Threat tests, repaired guardrails, bounded reflection, evaluation, monitoring, and safe export.</p><small>OUTCOME · Auditable submission</small></div>
+            <div class="day-copy lang-ar" lang="ar" dir="rtl"><h3>التأمين والإثبات</h3><p>اختبارات تهديد، وحواجز محسنة، ومراجعة محدودة، وتقييم، ومراقبة، وتصدير آمن.</p><small>الناتج · تسليم قابل للتدقيق</small></div>
+            <code>C29_EXPORT_SAFETY_CHECK</code>
+          </article>
+        </div>
+
+        <div class="track-grid" aria-label="Core and stretch learning tracks · المسار الأساسي ومسار التوسع">
+          <article class="track-card core-track">
+            <span class="track-badge">CORE · أساسي</span>
+            <div class="bilingual-pair">
+              <div class="lang-en" lang="en" dir="ltr"><h3>Required for every learner</h3><p>Complete the 14 TODOs in order, pass C9 and C20, then create the enabled C29 final export. Core work is the assessed course project.</p><small>Rule: do not skip ahead when a gate is blocked.</small></div>
+              <div class="lang-ar" lang="ar" dir="rtl"><h3>مطلوب من كل متدرب</h3><p>أكمل مهام TODO الأربع عشرة بالترتيب، واجتز C9 وC20، ثم أنشئ التصدير النهائي المفعّل في C29. المسار الأساسي هو مشروع الدورة المقيم.</p><small>القاعدة: لا تنتقل للأمام عند تعثر أي بوابة.</small></div>
+            </div>
+          </article>
+          <article class="track-card stretch-track">
+            <span class="track-badge">STRETCH · توسّع</span>
+            <div class="bilingual-pair">
+              <div class="lang-en" lang="en" dir="ltr"><h3>Optional after the daily gate</h3><p>Try one trainer-provided extension only after your core gate passes. Stretch work is for early finishers and never reduces a beginner's core score.</p><small>Rule: protect the working checkpoint before experimenting.</small></div>
+              <div class="lang-ar" lang="ar" dir="rtl"><h3>اختياري بعد بوابة اليوم</h3><p>نفّذ امتدادًا واحدًا تقترحه المدربة فقط بعد نجاح بوابة المسار الأساسي. التوسع للمنتهين مبكرًا ولا ينتقص من درجة المبتدئ في المسار الأساسي.</p><small>القاعدة: احفظ نقطة العمل السليمة قبل التجربة.</small></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="video-support-heading" id="day-video-guides">
+          <span class="video-summary-icon" aria-hidden="true">▶</span>
+          <div class="lang-en" lang="en" dir="ltr"><b>Video help, exactly where it belongs.</b><small>Open only the day or concept you want to revisit.</small></div>
+          <div class="lang-ar" lang="ar" dir="rtl"><b>مساعدة مرئية في موضعها الصحيح.</b><small>افتح فقط اليوم أو المفهوم الذي تريد مراجعته.</small></div>
+        </div>
+
+        <div class="day-video-support">
+          <details class="video-disclosure day-videos">
+            <summary>
+              <span class="video-summary-icon" aria-hidden="true">01</span>
+              <span class="video-summary-copy">
+                <b class="lang-en" lang="en" dir="ltr">Day 1 · Core, tools &amp; MCP</b>
+                <b class="lang-ar" lang="ar" dir="rtl">اليوم الأول · النواة والأدوات وMCP</b>
+                <small>C1 · C5 · C6 · C7–C8</small>
+              </span>
+              <span class="video-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="video-list">
+              <a class="video-card" href="https://www.youtube.com/watch?v=F8NKVhkZZWI" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C1 · RECOMMENDED</span><b>What are AI Agents?</b><small>IBM Technology · 12:28 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">مدخل بصري إلى معمارية الوكيل ومكوّناته.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+              <a class="video-card" href="https://www.youtube.com/watch?v=h8gMhXYAv1k" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C6 · RECOMMENDED</span><b>What is Tool Calling?</b><small>IBM Technology · 4:56 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">كيف يربط الوكيل النموذج بالبيانات والإجراءات.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+              <a class="video-card" href="https://www.youtube.com/watch?v=cGuyrANVi4A" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C7–C8 · RECOMMENDED</span><b>How MCP Actually Works</b><small>Google Cloud Tech · 7:58 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">العميل والخادم والأدوات والموارد والسياق.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+              <a class="video-card optional-video" href="https://www.youtube.com/watch?v=Eug2clsLtFs" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C5 · OPTIONAL DEEP DIVE</span><b>Understanding ReAct with LangChain</b><small>Sam Witteveen · 21:09 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">للفهم المفاهيمي فقط؛ لا تنسخ كود الإطار القديم.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </details>
+
+          <details class="video-disclosure day-videos">
+            <summary>
+              <span class="video-summary-icon" aria-hidden="true">02</span>
+              <span class="video-summary-copy">
+                <b class="lang-en" lang="en" dir="ltr">Day 2 · Memory &amp; orchestration</b>
+                <b class="lang-ar" lang="ar" dir="rtl">اليوم الثاني · الذاكرة والتنسيق</b>
+                <small>C12–C13 · C14–C16 · C18–C19</small>
+              </span>
+              <span class="video-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="video-list">
+              <a class="video-card" href="https://www.youtube.com/watch?v=T-D1OfcDW1M" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C12–C13 · RECOMMENDED</span><b>What is Retrieval-Augmented Generation?</b><small>IBM Technology · 6:35 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">الاسترجاع والتأريض قبل توليد الإجابة.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+              <a class="video-card" href="https://www.youtube.com/watch?v=sWH0T4Zez6I" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C14–C16 · RECOMMENDED</span><b>Multi Agent Systems Explained</b><small>IBM Technology · 7:57 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">توزيع الأدوار والتنسيق بين الوكلاء المتخصصين.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+              <a class="video-card" href="https://www.youtube.com/watch?v=cmEJ-5zYKHA" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C18–C19 · RECOMMENDED</span><b>Why AI Agents Need a Human in the Loop</b><small>IBM Technology · 7:27 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">لماذا تتوقف الإجراءات الحساسة للموافقة البشرية.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+              <a class="video-card optional-video" href="https://www.youtube.com/watch?v=aHCDrAbH_go" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">AFTER DAY 2 · OPTIONAL</span><b>Building Effective Agents with LangGraph</b><small>LangChain · 31:49 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">تعمّق في هندسة التدفق وأنماط التنسيق والتقييم.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </details>
+
+          <details class="video-disclosure day-videos">
+            <summary>
+              <span class="video-summary-icon" aria-hidden="true">03</span>
+              <span class="video-summary-copy">
+                <b class="lang-en" lang="en" dir="ltr">Day 3 · Secure, trace &amp; evaluate</b>
+                <b class="lang-ar" lang="ar" dir="rtl">اليوم الثالث · أمّن وتتبع وقيّم</b>
+                <small>C21–C23 · C25 · C27–C28</small>
+              </span>
+              <span class="video-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="video-list">
+              <a class="video-card" href="https://www.youtube.com/watch?v=5ZA1lTxTH3c" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C21–C23 · RECOMMENDED</span><b>Prevent Hidden Prompt Injection Attacks</b><small>IBM Technology · 10:07 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">حقن الأوامر غير المباشر وحماية استخدام الأدوات.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+              <a class="video-card" href="https://www.youtube.com/watch?v=fA9b4D8IsPQ" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C25 · RECOMMENDED</span><b>Getting Started with Tracing</b><small>LangChain · 8:20 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">لفهم مسار التنفيذ؛ لا يلزم حساب أو خدمة مدفوعة للاب.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+              <a class="video-card" href="https://www.youtube.com/watch?v=9uEay1jQM3w" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">C27–C28 · RECOMMENDED</span><b>Intro to Evals</b><small>Braintrust · 14:33 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">مجموعات الاختبار والمقاييس وبطاقات النتائج.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+              <a class="video-card optional-video" href="https://www.youtube.com/watch?v=JhJKgRAmfIU" target="_blank" rel="noopener noreferrer">
+                <span class="video-play" aria-hidden="true">▶</span><span class="video-card-body"><span class="video-topic">AFTER C22 · OPTIONAL VIEW</span><b>AI Red Teaming Agent</b><small>AI Engineer / Microsoft · 19:30 · EN/CC</small><span class="lang-ar" lang="ar" dir="rtl">عرض مفاهيمي على Azure؛ لا تحتاج Azure لتنفيذ اللاب.</span></span><span class="video-open" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </details>
+        </div>
+
+        <p class="video-library-note">
+          <span class="lang-en" lang="en" dir="ltr"><b>Use on demand:</b> watch only when a concept is unclear, then return to the indicated cell. No paid service is required. External videos may change; the current notebook remains authoritative.</span>
+          <span class="lang-ar" lang="ar" dir="rtl"><b>استخدمها عند الحاجة:</b> شاهد فقط عند غموض المفهوم، ثم عُد إلى الخلية المحددة. لا تحتاج خدمة مدفوعة. قد تتغير الفيديوهات الخارجية؛ ويبقى الدفتر الحالي هو المرجع.</span>
+        </p>
+      </section>
+
+      <section class="project-section" id="project" aria-labelledby="project-title-en project-title-ar">
+        <header class="section-heading">
+          <p class="eyebrow-pair"><span class="lang-en">THE MINI-CAPSTONE</span><span class="lang-divider" aria-hidden="true"></span><span class="lang-ar" dir="rtl">المشروع المصغّر</span></p>
+          <div class="section-title-grid">
+            <div class="lang-en" lang="en" dir="ltr"><h2 id="project-title-en">Meet Rafeeq Mini.</h2><p>A bilingual agentic operations assistant for a fictional delivery company—small enough for three days and complete enough to demonstrate the engineering lifecycle.</p></div>
+            <div class="lang-ar" lang="ar" dir="rtl"><h2 id="project-title-ar">تعرّف إلى رفيق المصغّر.</h2><p>مساعد عمليات وكيلي ثنائي اللغة لشركة توصيل افتراضية—مصغّر بما يناسب ثلاثة أيام، ومتكامل بما يكفي لإظهار دورة الهندسة.</p></div>
+          </div>
+        </header>
+
+        <div class="scenario-panel">
+          <div class="scenario-copy lang-en" lang="en" dir="ltr">
+            <span>PROJECT SCENARIO</span>
+            <h3>From customer request to safe, traceable action.</h3>
+            <p>A customer sends an order or refund request in Arabic or English. Rafeeq identifies intent and order number, verifies ownership using local data, retrieves the active policy, then routes the task to a specialist. A refund above SAR 500 pauses for documented human approval.</p>
+            <p class="safety-note"><b aria-hidden="true">◇</b> All customers, orders, policies, and actions are simulated. No real customer data or financial transaction is used.</p>
+          </div>
+
+          <ol class="scenario-flow" aria-label="Project flow · تدفق المشروع">
+            <li><span>01</span><b>Understand</b><small dir="rtl">فهم</small></li>
+            <li><span>02</span><b>Verify</b><small dir="rtl">تحقق</small></li>
+            <li><span>03</span><b>Retrieve</b><small dir="rtl">استرجاع</small></li>
+            <li><span>04</span><b>Route</b><small dir="rtl">توجيه</small></li>
+            <li><span>05</span><b>Approve</b><small dir="rtl">موافقة</small></li>
+            <li><span>06</span><b>Act</b><small dir="rtl">تنفيذ</small></li>
+            <li><span>07</span><b>Prove</b><small dir="rtl">إثبات</small></li>
+          </ol>
+
+          <div class="scenario-copy lang-ar" lang="ar" dir="rtl">
+            <span>سيناريو المشروع</span>
+            <h3>من طلب العميل إلى إجراء آمن وقابل للتتبع.</h3>
+            <p>يرسل العميل بالعربية أو الإنجليزية طلبًا متعلقًا بطلب شراء أو استرداد. يحدد رفيق الهدف ورقم الطلب، ويتحقق من الملكية ببيانات محلية، ويسترجع السياسة السارية، ثم يوجه المهمة إلى وكيل متخصص. يتوقف أي استرداد يتجاوز 500 ريال لموافقة بشرية موثقة.</p>
+            <p class="safety-note"><b aria-hidden="true">◇</b> جميع العملاء والطلبات والسياسات والإجراءات محاكاة. لا توجد بيانات حقيقية أو معاملة مالية.</p>
+          </div>
+        </div>
+
+        <div class="outcomes-grid">
+          <article class="outcome-card"><i aria-hidden="true">↬</i><div class="lang-en" lang="en"><h3>Bounded agent flow</h3><p>Typed state, explicit routing, step limits, and safe termination.</p></div><div class="lang-ar" lang="ar" dir="rtl"><h3>تدفق وكيلي محدود</h3><p>حالة محددة النوع، وتوجيه صريح، وحدود للخطوات، وإنهاء آمن.</p></div></article>
+          <article class="outcome-card"><i aria-hidden="true">ϟ</i><div class="lang-en" lang="en"><h3>Tools &amp; MCP</h3><p>Local tools with clear schemas and controlled access.</p></div><div class="lang-ar" lang="ar" dir="rtl"><h3>الأدوات وMCP</h3><p>أدوات محلية بعقود واضحة ووصول مضبوط.</p></div></article>
+          <article class="outcome-card"><i aria-hidden="true">⇄</i><div class="lang-en" lang="en"><h3>Multi-agent coordination</h3><p>Supervisor, specialist agents, and typed handoffs.</p></div><div class="lang-ar" lang="ar" dir="rtl"><h3>تنسيق متعدد الوكلاء</h3><p>منسق، ووكلاء متخصصون، وتفويض محدد النوع.</p></div></article>
+          <article class="outcome-card"><i aria-hidden="true">◇</i><div class="lang-en" lang="en"><h3>Safety &amp; approval</h3><p>Guardrails, attack tests, idempotency, and approval above SAR 500.</p></div><div class="lang-ar" lang="ar" dir="rtl"><h3>السلامة والموافقة</h3><p>حواجز، واختبارات هجومية، ومنع التكرار، وموافقة لما فوق 500 ريال.</p></div></article>
+          <article class="outcome-card"><i aria-hidden="true">▥</i><div class="lang-en" lang="en"><h3>Evidence &amp; monitoring</h3><p>Traces, evaluations, metrics, dashboard, and manifest.</p></div><div class="lang-ar" lang="ar" dir="rtl"><h3>الأدلة والمراقبة</h3><p>سجلات تتبع، وتقييمات، ومقاييس، ولوحة متابعة، وبيان تسليم.</p></div></article>
+          <article class="outcome-card"><i aria-hidden="true">▣</i><div class="lang-en" lang="en"><h3>Scoped memory</h3><p>Session memory, customer-scoped recall, and policy retrieval.</p></div><div class="lang-ar" lang="ar" dir="rtl"><h3>ذاكرة معزولة</h3><p>ذاكرة جلسة، واسترجاع حسب العميل، واسترجاع السياسة السارية.</p></div></article>
+        </div>
+
+        <div class="reality-block" id="lab-vs-production">
+          <div class="reality-heading">
+            <span class="reality-icon" aria-hidden="true">≠</span>
+            <div class="lang-en" lang="en" dir="ltr"><span>HONEST SCOPE</span><h3>What the lab teaches—and what production still needs.</h3><p>The lab demonstrates the engineering decisions safely and at zero cost. It is not presented as a live enterprise deployment.</p></div>
+            <div class="lang-ar" lang="ar" dir="rtl"><span>حدود واضحة</span><h3>ما الذي يعلّمه اللاب، وما الذي لا تزال بيئة الإنتاج تحتاجه.</h3><p>يعرض اللاب القرارات الهندسية بأمان ومن دون تكلفة، ولا يُقدَّم بوصفه نشرًا مؤسسيًا حيًا.</p></div>
+          </div>
+
+          <div class="honesty-grid">
+            <div class="honesty-panel lang-en" lang="en" dir="ltr">
+              <div class="honesty-head"><b>Area</b><b>In this lab</b><b>In production</b></div>
+              <div class="honesty-row"><strong>Model</strong><span>Deterministic stub; no API key</span><span>Governed LLM provider, evals, fallback</span></div>
+              <div class="honesty-row"><strong>Retrieval</strong><span>Local TF-IDF and cosine similarity</span><span>Managed search/vector store with access control</span></div>
+              <div class="honesty-row"><strong>MCP</strong><span>Local stdio server</span><span>Authenticated service, policy and network isolation</span></div>
+              <div class="honesty-row"><strong>Observability</strong><span>Local traces and simulated usage metrics</span><span>Central traces, tokens, latency, spend and alerts</span></div>
+              <div class="honesty-row"><strong>Delivery</strong><span>Auditable GitHub submission package</span><span>Hardened service, CI/CD and operations ownership</span></div>
+            </div>
+            <div class="honesty-panel lang-ar" lang="ar" dir="rtl">
+              <div class="honesty-head"><b>المجال</b><b>داخل اللاب</b><b>في الإنتاج</b></div>
+              <div class="honesty-row"><strong>النموذج</strong><span>محاكاة حتمية بلا مفتاح API</span><span>مزود LLM محكوم مع تقييم وبدائل</span></div>
+              <div class="honesty-row"><strong>الاسترجاع</strong><span>TF-IDF وتشابه Cosine محليان</span><span>بحث أو مخزن متجهات مُدار بصلاحيات وصول</span></div>
+              <div class="honesty-row"><strong>MCP</strong><span>خادم محلي عبر stdio</span><span>خدمة موثقة بهوية وسياسات وعزل شبكي</span></div>
+              <div class="honesty-row"><strong>المراقبة</strong><span>تتبعات محلية ومؤشرات استخدام محاكاة</span><span>تتبعات مركزية ورموز وزمن وتكلفة وتنبيهات</span></div>
+              <div class="honesty-row"><strong>التسليم</strong><span>حزمة GitHub قابلة للتدقيق</span><span>خدمة محصنة وCI/CD وملكية تشغيلية</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="first-win-section" id="first-win" aria-labelledby="first-win-en first-win-ar">
+        <div class="ready-visual" aria-label="Environment doctor success result · نتيجة نجاح فحص البيئة">
+          <span class="expected-badge">SUCCESS · نجاح</span>
+          <div class="terminal-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <code><span>$</span> run C0_ENV_DOCTOR</code>
+          <code><b>✓</b> python_runtime</code>
+          <code><b>✓</b> cpu_mode</code>
+          <code><b>✓</b> stub_mode</code>
+          <strong>C0 = READY</strong>
+          <small>all_passed=true</small>
+        </div>
+        <div class="first-win-copy lang-en" lang="en" dir="ltr"><span>YOUR FIRST WIN</span><h2 id="first-win-en">Start with certainty.</h2><p>Open the notebook, save a Drive copy, run <code>C0_ENV_DOCTOR</code>, and continue only after every check passes.</p><a class="light-button" href="https://colab.research.google.com/github/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/notebooks/Rafeeq_Mini_Capstone.ipynb" target="_blank" rel="noopener noreferrer">Open Colab <span aria-hidden="true">↗</span></a></div>
+        <div class="first-win-copy lang-ar" lang="ar" dir="rtl"><span>أول نجاح لك</span><h2 id="first-win-ar">ابدأ بيقين.</h2><p>افتح الدفتر، واحفظ نسخة في Drive، ثم شغّل <code>C0_ENV_DOCTOR</code>، ولا تتابع إلا بعد نجاح جميع الفحوص.</p><a class="light-button" href="https://colab.research.google.com/github/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/notebooks/Rafeeq_Mini_Capstone.ipynb" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> افتح كولاب</a></div>
+      </section>
+
+      <section class="path-section" id="reference-results" aria-labelledby="reference-results-title">
+        <p class="section-kicker" id="reference-results-title">Validated reference outputs · مخرجات مرجعية متحققة</p>
+        <div class="path-grid reference-grid">
+          <article class="path-card beginner-card">
+            <div class="path-icon" aria-hidden="true">✓</div>
+            <div class="path-copy lang-en" lang="en" dir="ltr">
+              <span class="path-tag">USE AFTER YOUR OWN ATTEMPT</span>
+              <h2>Compare evidence, not code.</h2>
+              <p>Choose a JSON evidence file generated by your notebook and compare its stable behaviors with the validated reference. The check runs locally in your browser; your file is not uploaded or stored.</p>
+              <small>Included: day gates, security retest, assessment, readiness, and final export · Excluded: solution code, TODO answers, hidden tests, and grades</small>
+              <div class="hero-actions">
+                <a class="primary-button compact" href="compare.html">Compare my output <span aria-hidden="true">→</span></a>
+                <a class="secondary-button compact" href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/tree/v0.9.0-rc3/reference-results" target="_blank" rel="noopener noreferrer">Browse contracts <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="path-copy lang-ar" lang="ar" dir="rtl">
+              <span class="path-tag">استخدمها بعد محاولتك</span>
+              <h2>قارن الأدلة، لا الكود.</h2>
+              <p>اختر ملف أدلة JSON أنشأه دفترك، وقارن سلوكياته الثابتة بالمرجع المتحقق. يجري الفحص محليًا داخل متصفحك؛ ولا يُرفع ملفك أو يُحفظ.</p>
+              <small>تشمل: بوابات الأيام، وإعادة اختبار الأمن، والتقييم، والجاهزية، والتصدير النهائي · لا تشمل: كود الحل، وإجابات المهام، والاختبارات الخفية، والدرجات</small>
+              <div class="hero-actions">
+                <a class="primary-button compact" href="compare.html"><span aria-hidden="true">←</span> قارن نتيجتي</a>
+                <a class="secondary-button compact" href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/tree/v0.9.0-rc3/reference-results" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> تصفح العقود</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mental-model">
+          <span class="mental-icon" aria-hidden="true">◇</span>
+          <p class="lang-en" lang="en" dir="ltr"><b>What is compared:</b> pass/fail gates, case IDs, safety decisions, bounded execution, and required artifacts. Timestamps, generated IDs, paths, hashes, sizes, and latency are expected to differ.</p>
+          <p class="lang-ar" lang="ar" dir="rtl"><b>ما الذي تتم مقارنته:</b> نجاح البوابات، ومعرّفات الحالات، وقرارات السلامة، وحدود التنفيذ، والملفات المطلوبة. من الطبيعي اختلاف الزمن والمعرّفات المولدة والمسارات والبصمات والأحجام وزمن الاستجابة.</p>
+        </div>
+      </section>
+
+      <section class="submission-section" id="submission" aria-labelledby="submission-title-en submission-title-ar">
+        <header class="section-heading">
+          <p class="eyebrow-pair"><span class="lang-en">SUBMISSION &amp; PASSING</span><span class="lang-divider" aria-hidden="true"></span><span class="lang-ar" dir="rtl">التسليم والاجتياز</span></p>
+          <div class="section-title-grid">
+            <div class="lang-en" lang="en" dir="ltr"><h2 id="submission-title-en">Finish cleanly. Submit evidence you can defend.</h2><p>Your reference comparison is a learning aid. Official technical acceptance requires the complete export and a green GitHub Actions run.</p></div>
+            <div class="lang-ar" lang="ar" dir="rtl"><h2 id="submission-title-ar">أنه العمل بنظافة. وسلّم أدلة تستطيع مناقشتها.</h2><p>المقارنة المرجعية أداة للتعلم. يتطلب القبول التقني الرسمي تصديرًا مكتملًا ونجاح GitHub Actions باللون الأخضر.</p></div>
+          </div>
+        </header>
+
+        <div class="safety-note submission-privacy-note">
+          <b aria-hidden="true">◇</b>
+          <span class="lang-en" lang="en">Public files must use only your assigned <code>learner_id</code> or GitHub username. Put your real name and contact details only in the trainer's private hand-in form. A green automated check does not replace the instructor's privacy review.</span>
+          <span class="lang-ar" lang="ar" dir="rtl">استخدم في الملفات العامة <code>learner_id</code> المخصص أو اسم مستخدم GitHub فقط. ضع اسمك الحقيقي وبيانات التواصل في نموذج التسليم الخاص لدى المدربة. نجاح الفحص الآلي لا يغني عن مراجعة الخصوصية التي تجريها المدربة.</span>
+        </div>
+
+        <div class="submission-status-grid" aria-label="Submission status · حالة التسليم">
+          <article class="status-card">
+            <span class="status-symbol" aria-hidden="true">◷</span>
+            <div class="bilingual-pair"><div class="lang-en" lang="en"><small>DEADLINE</small><b data-meta-deadline-en>Announced by the trainer</b></div><div class="lang-ar" lang="ar" dir="rtl"><small>الموعد النهائي</small><b data-meta-deadline-ar>تعلنه المدربة أثناء الدورة</b></div></div>
+          </article>
+          <article class="status-card">
+            <span class="status-symbol" aria-hidden="true">↗</span>
+            <div class="bilingual-pair"><div class="lang-en" lang="en"><small>SUBMISSION CHANNEL</small><b data-meta-form-en>Announced by the trainer</b></div><div class="lang-ar" lang="ar" dir="rtl"><small>قناة التسليم</small><b data-meta-form-ar>تعلنها المدربة أثناء الدورة</b></div></div>
+          </article>
+          <article class="status-card required-status">
+            <span class="status-symbol" aria-hidden="true">✓</span>
+            <div class="bilingual-pair"><div class="lang-en" lang="en"><small>OFFICIAL TECHNICAL CHECK</small><b>“Learner submission quality” is green</b></div><div class="lang-ar" lang="ar" dir="rtl"><small>الفحص التقني الرسمي</small><b>ظهور “Learner submission quality” باللون الأخضر</b></div></div>
+          </article>
+        </div>
+
+        <details class="rubric-disclosure">
+          <summary><span aria-hidden="true">◎</span><b class="lang-en" id="sdaia-rubric-title-en" lang="en">SDAIA administrative requirements — 10 assessed points</b><b class="lang-ar" id="sdaia-rubric-title-ar" lang="ar" dir="rtl">متطلبات سدايا الإدارية — 10 درجات مقيمة</b><span class="video-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="rubric-table" role="table" aria-labelledby="sdaia-rubric-title-en sdaia-rubric-title-ar">
+            <div class="rubric-row rubric-head" role="row"><span role="columnheader"><span class="lang-en" lang="en">Required evidence</span><span class="lang-ar" lang="ar" dir="rtl">الدليل المطلوب</span></span><span role="columnheader"><span class="lang-en" lang="en">Points</span><span class="lang-ar" lang="ar" dir="rtl">الدرجة</span></span></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Clear, comprehensive GitHub repository description</b><small class="lang-ar" lang="ar" dir="rtl">وصف واضح وشامل لمستودع GitHub</small></span><strong role="cell">2</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Professional README: idea, run, and use</b><small class="lang-ar" lang="ar" dir="rtl">README احترافي: الفكرة والتشغيل والاستخدام</small></span><strong role="cell">2</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Appropriate linked technical documentation</b><small class="lang-ar" lang="ar" dir="rtl">توثيق فني مناسب ومترابط</small></span><strong role="cell">2</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Safe, meaningful Git progress and version history</b><small class="lang-ar" lang="ar" dir="rtl">تقدم Git آمن وذو معنى وسجل إصدارات محفوظ</small></span><strong role="cell">2</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Training-program reference in README</b><small class="lang-ar" lang="ar" dir="rtl">الإشارة إلى البرنامج التدريبي في README</small></span><strong role="cell">1</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Working SDAIA Academy GitHub link</b><small class="lang-ar" lang="ar" dir="rtl">رابط أكاديمية سدايا الصحيح</small></span><strong role="cell">1</strong></div>
+            <div class="rubric-row rubric-total" role="row"><span role="cell"><b class="lang-en" lang="en">Administrative subtotal</b><b class="lang-ar" lang="ar" dir="rtl">المجموع الإداري</b></span><strong role="cell">10</strong></div>
+          </div>
+          <p class="bilingual-note bilingual-pair"><span class="lang-en" lang="en">These 10 points sit inside the existing 15-point GitHub-delivery area; the remaining 5 points cover clean execution, linked evidence, and privacy. Read the <a href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/SDAIA_ADMIN_REQUIREMENTS.md" target="_blank" rel="noopener noreferrer">full evidence standard and safe daily Git path</a>.</span><span class="lang-ar" lang="ar" dir="rtl">تقع هذه الدرجات العشر داخل محور تسليم GitHub الحالي من 15 درجة، وتغطي الدرجات الخمس المتبقية التشغيل النظيف وترابط الأدلة والخصوصية. راجع <a href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/SDAIA_ADMIN_REQUIREMENTS.md" target="_blank" rel="noopener noreferrer">معيار الأدلة ومسار Git اليومي الآمن</a>.</span></p>
+          <div class="safety-note"><b aria-hidden="true">i</b><div class="bilingual-pair"><span class="lang-en" lang="en">The course-evaluation link is shared by the SDAIA coordinator or supervisor at the start of the final day and completed privately. It has no project points. Stars, Follow, Fork, Pull Requests, Issues, open-source work, and community sharing are encouraged where appropriate but are not graded.</span><span class="lang-ar" lang="ar" dir="rtl">يشارك منسق أو مشرف سدايا رابط تقييم الدورة في بداية اليوم الأخير ويستكمل بصورة خاصة، ولا يحمل درجات للمشروع. أما Stars وFollow وFork وPull Requests وIssues والمساهمات المفتوحة والمشاركة المجتمعية فهي تشجيعية عند ملاءمتها وغير مقيمة.</span></div></div>
+        </details>
+
+        <div class="passing-grid">
+          <article class="pass-card">
+            <div class="pass-score" aria-label="Passing score 70 out of 100 · درجة الاجتياز 70 من 100"><strong data-meta-passing-score>70</strong><span>/100</span></div>
+            <div class="bilingual-pair">
+              <div class="lang-en" lang="en" dir="ltr"><h3>Passing score</h3><p>The score is necessary but not sufficient: every non-compensable gate below must also pass.</p></div>
+              <div class="lang-ar" lang="ar" dir="rtl"><h3>درجة الاجتياز</h3><p>الدرجة شرط لازم لكنها لا تكفي وحدها؛ يجب كذلك اجتياز جميع البوابات غير القابلة للتعويض أدناه.</p></div>
+            </div>
+          </article>
+
+          <article class="gate-card">
+            <div class="bilingual-pair">
+              <div class="lang-en" lang="en" dir="ltr"><h3>Non-compensable gates</h3><ul><li>C9 and C20 pass</li><li>C29 shows <code>FINAL_EXPORT_CREATED</code></li><li>GitHub Actions is green and required administrative evidence is present</li><li>No secrets or real data</li><li>No cross-customer leak or unauthorized write</li></ul></div>
+              <div class="lang-ar" lang="ar" dir="rtl"><h3>بوابات لا تعوضها الدرجات</h3><ul><li>نجاح C9 وC20</li><li>ظهور <code>FINAL_EXPORT_CREATED</code> في C29</li><li>نجاح GitHub Actions ووجود الأدلة الإدارية المطلوبة</li><li>عدم وجود أسرار أو بيانات حقيقية</li><li>عدم تسرب بيانات عميل أو تنفيذ كتابة غير مصرح بها</li></ul></div>
+            </div>
+          </article>
+        </div>
+
+        <details class="rubric-disclosure">
+          <summary><span aria-hidden="true">▤</span><b class="lang-en" lang="en">View the 100-point rubric</b><b class="lang-ar" lang="ar" dir="rtl">اعرض معيار التقييم من 100 درجة</b><span class="video-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="rubric-table" role="table" aria-label="Assessment rubric · معيار التقييم">
+            <div class="rubric-row rubric-head" role="row"><span role="columnheader">Assessment area · محور التقييم</span><span role="columnheader">Points · الدرجة</span></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Day 1: architecture, state, tools &amp; MCP</b><small class="lang-ar" lang="ar" dir="rtl">اليوم الأول: المعمارية والحالة والأدوات وMCP</small></span><strong role="cell">20</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Day 2: memory, retrieval, orchestration &amp; approval</b><small class="lang-ar" lang="ar" dir="rtl">اليوم الثاني: الذاكرة والاسترجاع والتنسيق والموافقة</small></span><strong role="cell">20</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Day 3: security, reflection, tracing &amp; optimization</b><small class="lang-ar" lang="ar" dir="rtl">اليوم الثالث: الأمن والمراجعة والتتبع والتحسين</small></span><strong role="cell">25</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">SDAIA administration, evidence, privacy &amp; GitHub</b><small class="lang-ar" lang="ar" dir="rtl">متطلبات سدايا والأدلة والخصوصية وGitHub</small></span><strong role="cell">15</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Engineering decisions</b><small class="lang-ar" lang="ar" dir="rtl">تفسير القرارات الهندسية</small></span><strong role="cell">10</strong></div>
+            <div class="rubric-row" role="row"><span role="cell"><b class="lang-en">Presentation &amp; individual defense</b><small class="lang-ar" lang="ar" dir="rtl">العرض والمناقشة الفردية</small></span><strong role="cell">10</strong></div>
+            <div class="rubric-row rubric-total" role="row"><span role="cell"><b>Total · المجموع</b></span><strong role="cell">100</strong></div>
+          </div>
+          <p class="bilingual-note"><span class="lang-en" lang="en">Review the <a href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/ASSESSMENT_RUBRIC.md" target="_blank" rel="noopener noreferrer">complete public rubric, performance bands, and gate rules</a>.</span><span class="lang-ar" lang="ar" dir="rtl">راجع <a href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/ASSESSMENT_RUBRIC.md" target="_blank" rel="noopener noreferrer">المعيار العام الكامل ومستويات الأداء وقواعد البوابات</a>.</span></p>
+        </details>
+
+        <div class="upload-wizard" data-upload-checklist>
+          <div class="wizard-heading">
+            <div class="lang-en" lang="en" dir="ltr"><span>FINAL UPLOAD WIZARD</span><h3>Eight checks between C29 and Submit.</h3><p>Tick each item as you complete it. Progress is stored only in this browser.</p></div>
+            <div class="wizard-progress" aria-hidden="true"><strong data-upload-count>0/8</strong><span><i data-upload-progress></i></span></div>
+            <div class="lang-ar" lang="ar" dir="rtl"><span>معالج الرفع النهائي</span><h3>ثمانية فحوص بين C29 والتسليم.</h3><p>حدد كل عنصر بعد إنجازه. يُحفظ تقدمك داخل هذا المتصفح فقط.</p></div>
+          </div>
+
+          <ol class="wizard-steps">
+            <li><label><input type="checkbox" value="1"><span class="wizard-number">01</span><span class="bilingual-pair"><span class="lang-en" lang="en">Run C29 with final export enabled; confirm <code>FINAL_EXPORT_CREATED</code>.</span><span class="lang-ar" lang="ar" dir="rtl">شغّل C29 مع تفعيل التصدير النهائي وتأكد من ظهور <code>FINAL_EXPORT_CREATED</code>.</span></span></label></li>
+            <li><label><input type="checkbox" value="1"><span class="wizard-number">02</span><span class="bilingual-pair"><span class="lang-en" lang="en">Download the generated submission ZIP and extract it once.</span><span class="lang-ar" lang="ar" dir="rtl">نزّل ملف ZIP الناتج للتسليم، ثم فك ضغطه مرة واحدة.</span></span></label></li>
+            <li><label><input type="checkbox" value="1"><span class="wizard-number">03</span><span class="bilingual-pair"><span class="lang-en" lang="en">Download your executed notebook as <code>.ipynb</code>.</span><span class="lang-ar" lang="ar" dir="rtl">نزّل دفتر كولاب المنفذ بصيغة <code>.ipynb</code>.</span></span></label></li>
+            <li><label><input type="checkbox" value="1"><span class="wizard-number">04</span><span class="bilingual-pair"><span class="lang-en" lang="en">Place it at <code>notebooks/Rafeeq_Mini_Capstone.ipynb</code>.</span><span class="lang-ar" lang="ar" dir="rtl">ضعه في المسار <code>notebooks/Rafeeq_Mini_Capstone.ipynb</code>.</span></span></label></li>
+            <li><label><input type="checkbox" value="1"><span class="wizard-number">05</span><span class="bilingual-pair"><span class="lang-en" lang="en">Confirm the hidden <code>.github/workflows/learner-submission-quality.yml</code> file is present.</span><span class="lang-ar" lang="ar" dir="rtl">تأكد من وجود الملف المخفي <code>.github/workflows/learner-submission-quality.yml</code>.</span></span></label></li>
+            <li><label><input type="checkbox" value="1"><span class="wizard-number">06</span><span class="bilingual-pair"><span class="lang-en" lang="en">Mark Day 3 <code>PASS</code> in <code>LEARNING_PROGRESS.md</code>, then upload the extracted contents—not the outer folder or ZIP—beside it.</span><span class="lang-ar" lang="ar" dir="rtl">غيّر حالة اليوم الثالث إلى <code>PASS</code> داخل <code>LEARNING_PROGRESS.md</code>، ثم ارفع المحتويات المفكوكة بجانبه، لا المجلد الخارجي أو ZIP.</span></span></label></li>
+            <li><label><input type="checkbox" value="1"><span class="wizard-number">07</span><span class="bilingual-pair"><span class="lang-en" lang="en">Open Actions and wait for “Learner submission quality” to turn green.</span><span class="lang-ar" lang="ar" dir="rtl">افتح Actions وانتظر حتى يظهر “Learner submission quality” باللون الأخضر.</span></span></label></li>
+            <li><label><input type="checkbox" value="1"><span class="wizard-number">08</span><span class="bilingual-pair"><span class="lang-en" lang="en">Submit the repository URL and final commit SHA through the announced channel.</span><span class="lang-ar" lang="ar" dir="rtl">أرسل رابط المستودع وSHA الخاص بآخر Commit عبر القناة المعلنة.</span></span></label></li>
+          </ol>
+
+          <div class="wizard-footer" role="status" aria-live="polite">
+            <span class="wizard-state" data-upload-state>IN PROGRESS · قيد التنفيذ</span>
+            <p class="lang-en" lang="en" data-upload-message-en>Complete all eight checks before opening the submission channel.</p>
+            <p class="lang-ar" lang="ar" dir="rtl" data-upload-message-ar>أكمل الفحوص الثمانية قبل فتح قناة التسليم.</p>
+            <a class="secondary-button compact unavailable" data-submission-link aria-disabled="true"><span data-submission-link-label>Submission link announced by trainer · رابط التسليم تعلنه المدربة</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="help-section" id="help" aria-labelledby="help-en help-ar">
+        <div class="help-heading">
+          <span class="help-icon" aria-hidden="true">?</span>
+          <div class="lang-en" lang="en" dir="ltr"><span>HELP WITHOUT THE QUEUE</span><h2 id="help-en">Stuck? Follow the help ladder.</h2></div>
+          <div class="lang-ar" lang="ar" dir="rtl"><span>مساعدة بلا انتظار</span><h2 id="help-ar">واجهت مشكلة؟ اتبع سُلّم المساعدة.</h2></div>
+        </div>
+        <ol class="help-ladder">
+          <li><span>1</span><b class="lang-en">Read the hint</b><b class="lang-ar" dir="rtl">اقرأ التلميح</b></li>
+          <li><span>2</span><b class="lang-en">Check expected output</b><b class="lang-ar" dir="rtl">قارن النتيجة المتوقعة</b></li>
+          <li><span>3</span><b class="lang-en">Open error guide</b><b class="lang-ar" dir="rtl">افتح دليل الخطأ</b></li>
+          <li><span>4</span><b class="lang-en">Open verified resource</b><b class="lang-ar" dir="rtl">افتح المصدر الموثق</b></li>
+          <li><span>5</span><b class="lang-en">Send a safe request</b><b class="lang-ar" dir="rtl">أرسل طلبًا آمنًا</b></li>
+        </ol>
+        <div class="resource-links" aria-label="Verified learning resources · مصادر تعلم متحقق منها">
+          <a href="https://docs.github.com/en/get-started/start-your-journey/hello-world" target="_blank" rel="noopener noreferrer"><b>GitHub Hello World</b><small>Repository basics · أساسيات المستودع</small></a>
+          <a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener noreferrer"><b>Welcome to Colab</b><small>Browser notebook basics · أساسيات الدفتر</small></a>
+          <a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noopener noreferrer"><b>MCP Documentation</b><small>Tools and context · الأدوات والسياق</small></a>
+          <a href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/learner-guide.md" target="_blank" rel="noopener noreferrer"><b>Learner guide · دليل المتدرب</b><small>Setup, recovery, export · التجهيز والاستعادة والتصدير</small></a>
+          <a href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/recovery/README.md" target="_blank" rel="noopener noreferrer"><b>Recovery guide · دليل الاستعادة</b><small>Runtime reset and checkpoints · إعادة البيئة ونقاط الحفظ</small></a>
+          <a href="compare.html"><b>Reference comparison · المقارنة المرجعية</b><small>Compare evidence, not code · قارن الأدلة لا الكود</small></a>
+        </div>
+        <div class="help-action">
+          <p class="lang-en" lang="en">Never paste passwords, tokens, private links, or real customer data into a help request.</p>
+          <p class="lang-ar" lang="ar" dir="rtl">لا تضع كلمات مرور أو رموز وصول أو روابط خاصة أو بيانات عملاء حقيقية داخل طلب المساعدة.</p>
+          <div class="help-buttons">
+            <button class="secondary-button compact" type="button" data-copy-help><span aria-hidden="true">▣</span> Copy safe request · انسخ الطلب الآمن</button>
+            <a class="primary-button compact" href="https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/issues/new?template=lab-help.yml" target="_blank" rel="noopener noreferrer" data-support-link><span aria-hidden="true">↗</span> Open lab-help issue · افتح طلب دعم</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><span class="brand-mark" aria-hidden="true">✦</span><div><b>Rafeeq Mini Labs · لابات رفيق المصغّر</b><small>Advanced Agentic AI Systems Engineering · هندسة أنظمة الذكاء الاصطناعي التوكيلي المتقدمة</small></div></div>
+      <div class="trainer"><span>Course Instructor · مدربة الدورة</span><b>Meaad Al-Marri · ميعاد المري</b></div>
+      <div class="footer-links"><a href="https://github.com/SDAIAAcademy" target="_blank" rel="noopener noreferrer">SDAIA Academy on GitHub <span aria-hidden="true">↗</span></a><small>External reference; no endorsement claim · مرجع خارجي دون ادعاء اعتماد</small><small>Release candidate · 0.9.0-rc3</small></div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" hidden data-toast>Copied safely · تم النسخ بأمان</div>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+# Mandatory learner path: Python standard library only.
+# Colab's preinstalled matplotlib may be used for the dashboard; the scripts
+# include a standard-library PNG fallback, so no pip install is required.
+# LLM_MODE=stub is the only supported public mode. No API key is required.

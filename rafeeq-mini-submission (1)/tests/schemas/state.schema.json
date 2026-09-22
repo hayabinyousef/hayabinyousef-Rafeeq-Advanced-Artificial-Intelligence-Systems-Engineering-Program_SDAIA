@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rafeeq.training/schemas/state.schema.json",
+  "title": "Rafeeq trace-safe agent state",
+  "description": "Serializable operational state. Raw messages and tool observations are intentionally excluded.",
+  "type": "object",
+  "required": [
+    "customer_id", "session_id", "trace_id", "locale", "order_id", "route",
+    "status", "response", "outcome", "last_action", "step_count",
+    "transition_count", "handoff_count", "reflection_count", "approval_id", "errors"
+  ],
+  "properties": {
+    "customer_id": {"type": "string", "pattern": "^CUST-[0-9]{3}$"},
+    "session_id": {"type": "string", "minLength": 8, "maxLength": 64},
+    "trace_id": {"type": "string", "minLength": 12, "maxLength": 64},
+    "locale": {"type": "string", "enum": ["ar", "en"]},
+    "order_id": {"type": ["string", "null"], "pattern": "^TW-[0-9]{5}$"},
+    "route": {"enum": ["orders", "refund", "finish", "escalate", null]},
+    "status": {
+      "type": "string",
+      "enum": ["new", "running", "completed", "blocked", "needs_approval", "escalated", "failed"]
+    },
+    "response": {"type": "string"},
+    "outcome": {"type": "string"},
+    "last_action": {"type": "string", "minLength": 1},
+    "step_count": {"type": "integer", "minimum": 0, "maximum": 6},
+    "transition_count": {"type": "integer", "minimum": 0, "maximum": 12},
+    "handoff_count": {"type": "integer", "minimum": 0, "maximum": 2},
+    "reflection_count": {"type": "integer", "minimum": 0, "maximum": 1},
+    "approval_id": {"type": ["string", "null"], "pattern": "^APR-[A-F0-9]{12}$"},
+    "errors": {"type": "array", "items": {"type": "string"}, "maxItems": 10}
+  },
+  "not": {
+    "anyOf": [
+      {"required": ["message"]},
+      {"required": ["tool_observations"]},
+      {"required": ["chain_of_thought"]}
+    ]
+  },
+  "additionalProperties": true
+}
