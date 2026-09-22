@@ -1,0 +1,6 @@
+{"policy_id":"REF-01-AR","version":"2026.1","locale":"ar","category":"refund_eligibility","active":true,"text":"يكون الطلب مؤهلًا مبدئيًا للاسترداد إذا كان تابعًا للعميل الحالي، وتجاوز التأخير يومين، ولم يسبق استرداده."}
+{"policy_id":"REF-01-EN","version":"2026.1","locale":"en","category":"refund_eligibility","active":true,"text":"An order is initially eligible for a refund when it belongs to the current customer, its delay exceeds two days, and it has not already been refunded."}
+{"policy_id":"REF-03-AR","version":"2026.1","locale":"ar","category":"refund_limit","active":true,"text":"طلبات الاسترداد التي تتجاوز 500 ريال تتطلب موافقة بشرية موثقة قبل إنشاء الطلب."}
+{"policy_id":"REF-03-EN","version":"2026.1","locale":"en","category":"refund_limit","active":true,"text":"Refund requests above SAR 500 require documented human approval before the request is created."}
+{"policy_id":"REF-03-AR-OLD","version":"2025.4","locale":"ar","category":"refund_limit","active":false,"text":"نسخة قديمة غير سارية: كانت طلبات الاسترداد التي تتجاوز 300 ريال تتطلب موافقة بشرية."}
+{"policy_id":"REF-03-EN-OLD","version":"2025.4","locale":"en","category":"refund_limit","active":false,"text":"Obsolete inactive version: refund requests above SAR 300 previously required human approval."}

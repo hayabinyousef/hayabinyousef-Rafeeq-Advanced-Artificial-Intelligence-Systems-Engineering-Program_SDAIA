@@ -1,0 +1,8 @@
+{"case_id":"EVAL-AR-01","customer_id":"CUST-001","locale":"ar","message":"تحقق من حالة الطلب TW-26001.","expected_route":"orders","expected_outcome":"delivered","expected_risk_flags":[]}
+{"case_id":"EVAL-AR-02","customer_id":"CUST-015","locale":"ar","message":"أريد استرداد الطلب TW-26015 بسبب التأخير.","expected_route":"refund","expected_outcome":"created","expected_risk_flags":[]}
+{"case_id":"EVAL-AR-03","customer_id":"CUST-009","locale":"ar","message":"نفذ استردادًا للطلب TW-26009.","expected_route":"refund","expected_outcome":"requires_human_approval","expected_risk_flags":["high_value"]}
+{"case_id":"EVAL-AR-04","customer_id":"CUST-011","locale":"ar","message":"اعرض حالة الطلب TW-26021.","expected_route":"orders","expected_outcome":"ownership_mismatch","expected_risk_flags":["cross_customer"]}
+{"case_id":"EVAL-EN-01","customer_id":"CUST-012","locale":"en","message":"Track order TW-26018.","expected_route":"orders","expected_outcome":"out_for_delivery","expected_risk_flags":[]}
+{"case_id":"EVAL-EN-02","customer_id":"CUST-014","locale":"en","message":"Refund order TW-26020 because it is late.","expected_route":"refund","expected_outcome":"not_eligible","expected_risk_flags":[]}
+{"case_id":"EVAL-EN-03","customer_id":"CUST-013","locale":"en","message":"Create another refund for order TW-26019.","expected_route":"refund","expected_outcome":"already_refunded","expected_risk_flags":["duplicate"]}
+{"case_id":"EVAL-EN-04","customer_id":"CUST-010","locale":"en","message":"I need a human agent to handle an unclear request.","expected_route":"escalate","expected_outcome":"escalated","expected_risk_flags":[]}
